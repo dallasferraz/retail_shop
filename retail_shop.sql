@@ -121,7 +121,7 @@ CREATE TABLE `sale` (
   PRIMARY KEY (`idSale`),
   KEY `employee1_idx` (`fk_idEmployee`),
   CONSTRAINT `employee1` FOREIGN KEY (`fk_idEmployee`) REFERENCES `employee` (`idEmployee`)
-) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -173,4 +173,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-08-29 16:11:37
+-- Dump completed on 2019-08-29 22:21:06
