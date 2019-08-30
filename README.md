@@ -1,5 +1,5 @@
 # retail_shop
-A public MySQL database I used for a small retail shop project developed with my associate in 2017.
+A public MySQL database I used for a small retail shop project developed with my associate in 2017. I filled the tables with dummy data for a better comprehension of how the system works. Feel free to modify it and use it as you please.
 
 It is important to notice that the business rule tasks present in the stored procedure, trigger and custom function in this database are being displayed as examples. There are possible other ways to accomplish the same tasks in a more efficient fashion. The structure of the database is designed as seen below:
 
@@ -42,7 +42,5 @@ BEGIN
 			INSERT INTO `sale` (`sale_date`,`total_before`,`discount`,`cash`,`credit_card`,`check`,`check_date`,`check_name`,`total_after`,`fk_idEmployee`) VALUES (saleDate,totalBefore,priceDiscount,cashAmount,creditCardAmount,checkAmount,checkDate,checkName,totalAfter,employeeID);
 			SET warningMessage = "Sale completed";
 		END IF;
-    END
-	```
-	
-I filled the tables with dummy data for a better comprehension of how the system works. Feel free to modify it and use it as you please.
+END
+```
