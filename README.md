@@ -44,3 +44,5 @@ BEGIN
 		END IF;
     END
 	```
+	
+	I filled the tables with dummy data for a better comprehension of how the system works. Feel free to modify it and use it as you please.
