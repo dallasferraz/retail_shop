@@ -1,5 +1,5 @@
 # retail_shop
-A public MySQL database I used for a small retail shop project developed with my associate in 2017. I filled the tables with dummy data for a better comprehension of how the system works. Feel free to modify it and use it as you please, e.g. by including more in-depth features like safety protocols for passwords and type modification of variables (approached in a different project).
+A public database (both for MySQL and SQL server formats) I used for a small retail shop project developed with my associate in 2017. I filled the tables with dummy data for a better comprehension of how the system works. Feel free to modify it and use it as you please, e.g. by including more in-depth features like safety protocols for passwords and type modification of variables (approached in a different project).
 
 It is important to notice that the business rule tasks present in the stored procedure, trigger and custom function in this database are being displayed as examples. There are possibly other ways to accomplish the same tasks in a more efficient fashion. The structure of the database is designed as seen below:
 
