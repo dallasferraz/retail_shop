@@ -23,7 +23,7 @@ AS
 
 	IF(@new_price < 0)
 		BEGIN
-			RAISERROR('Only positive values allowed.',1,1)
+			RAISERROR('Only positive values allowed.',16,1)
 			ROLLBACK TRANSACTION
 		END
 GO
