@@ -3,7 +3,11 @@ A public database (both for MySQL and SQL server formats) I used for a small ret
 
 ## SQL server
 
+The structure of the database in SQL server can be seen below:
+
 ![sqlserver](https://raw.githubusercontent.com/dallasferraz/retail_shop/master/sqlserverdb.png)
+
+And this is the chunk of code used for creating a trigger which will stop any update in the unit price of the items be negative. The same would apply to unit cost, with a similar trigger:
 
 ```tsql
 /* treating unit price (only positive values) via trigger */
