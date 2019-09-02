@@ -29,6 +29,22 @@ AS
 GO
 ```
 
+The next chunk of code displays a stored procedure that informs the salesman whether the sale has a total sum above a chosen threshold of $100:
+
+```tsql
+CREATE PROC importantSale @idSale INT
+AS
+	IF((SELECT total_after FROM sale WHERE idSale = @idSale) >= 100)
+		BEGIN
+			PRINT 'Important sale.'
+		END
+	ELSE
+		BEGIN
+			PRINT 'Regular sale.'
+		END
+GO
+```
+
 It is important to notice that the business rule tasks present in the stored procedure, trigger and custom function in this database are being displayed as examples. There are possibly other ways to accomplish the same tasks in a more efficient fashion. 
 
 ## MySQL
