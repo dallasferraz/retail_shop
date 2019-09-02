@@ -57,7 +57,19 @@ Both *sale* and *sale_item* store information about the actual sale, such as the
 
 As for the custom trigger shown below, it is responsible for keeping the stock positive, or at least zero, instead of allowing the sale to keep going even with no more items a certain type in inventory:
 
-![trigger code](https://raw.githubusercontent.com/dallasferraz/retail_shop/master/zeroinventorytrigger.png)
+```mysql
+DELIMITER $
+
+CREATE TRIGGER zeroInventory
+BEFORE INSERT ON sale_item
+FOR EACH ROW
+BEGIN
+	IF(NEW.`inventory_records`.`quantity_after` < 0) THEN
+		SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Insufficient units for sale.';
+	END IF;
+END
+$
+```
 
 The chunk of code below displays the function used for a general overview on the overall aquisition cost of a certain item:
 
