@@ -7,6 +7,8 @@ The structure of the database in SQL server can be seen below:
 
 ![sqlserver](https://raw.githubusercontent.com/dallasferraz/retail_shop/master/sqlserverdb.png)
 
+Both *sale* and *sale_item* store information about the actual sale, such as the date, payment option, volume of transaction, which products were sold and how many of each and so on. The table *employee* holds information about the company's personnel (password, role etc), *inventory_records* informs us which item was replenished by the suppliers or is selling more. Finally, *product* displays not only information about the item, such as vending price and cost, but also about the supplier.
+
 And this is the chunk of code used for creating a trigger which will stop any update in the unit price of the items be negative. The same would apply to unit cost, with a similar trigger:
 
 ```tsql
@@ -52,8 +54,6 @@ It is important to notice that the business rule tasks present in the stored pro
 The structure of the database is designed as seen below:
 
 ![retail shop panorama](https://raw.githubusercontent.com/dallasferraz/retail_shop/master/mysqlmodel.png)
-
-Both *sale* and *sale_item* store information about the actual sale, such as the date, payment option, volume of transaction, which products were sold and how many of each and so on. The table *employee* holds information about the company's personnel (password, role etc), *inventory_records* informs us which item was replenished by the suppliers or is selling more. Finally, *product* displays not only information about the item, such as vending price and cost, but also about the supplier.
 
 As for the custom trigger shown below, it is responsible for keeping the stock positive, or at least zero, instead of allowing the sale to keep going even with no more items a certain type in inventory:
 
