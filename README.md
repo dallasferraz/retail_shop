@@ -17,7 +17,7 @@ ON dbo.product
 FOR UPDATE
 AS 
 	DECLARE @idProduct INT
-	DECLARE @new_price FLOAT
+	DECLARE @new_price MONEY
 
 	SELECT @new_price = price FROM inserted
 
