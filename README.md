@@ -12,13 +12,15 @@ CREATE TRIGGER tgr_update_price
 ON dbo.product
 FOR UPDATE
 AS 
-
+	DECLARE @idProduct INT
 	DECLARE @new_price FLOAT
+
 	SELECT @new_price = price FROM inserted
 
 	IF(@new_price < 0)
 		BEGIN
-			PRINT 'Only positive values'
+			RAISERROR('Only positive values allowed.',1,1)
+			ROLLBACK TRANSACTION
 		END
 GO
 ```
